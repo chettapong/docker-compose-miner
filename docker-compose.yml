@@ -1,10 +1,19 @@
 version: '3'
 services:
-  ccminer-stak:
+  ccminer-stak-datapaw:
     build: ./images/ccminer-in-docker
     environment:
       - ALGO=lyra2v2 \
       - MINING_POOL=stratum+tcp://pool.datapaw.net:4533 \
+      - USER_NAME=SfvDZZwbb4CJ9DDAuRFsJqFLMWoEzJWHZH.iamsrichai \
+      - PASSWORD= \
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+  ccminer-stak-suprnova:
+    build: ./images/ccminer-in-docker
+    environment:
+      - ALGO=lyra2rev2 \
+      - MINING_POOL=stratum+tcp://stak.suprnova.cc:7706 \
       - USER_NAME=SfvDZZwbb4CJ9DDAuRFsJqFLMWoEzJWHZH.iamsrichai \
       - PASSWORD= \
     volumes:
