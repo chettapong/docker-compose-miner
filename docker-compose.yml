@@ -1,7 +1,7 @@
 version: '3'
 services:
   ccminer-stak-datapaw:
-    build: ./images/ccminer-in-docker
+    image: gardenminer/miner
     environment:
       - ALGO=lyra2v2
       - MINING_POOL=stratum+tcp://pool.datapaw.net:4533
@@ -10,7 +10,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
   ccminer-stak-suprnova:
-    build: ./images/ccminer-in-docker
+    image: gardenminer/miner
     environment:
       - ALGO=lyra2rev2
       - MINING_POOL=stratum+tcp://stak.suprnova.cc:7706
@@ -19,7 +19,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
   ccminer-xzc-datapaw:
-    build: ./images/ccminer-in-docker
+    image: gardenminer/miner
     environment:
       - ALGO=lyra2z
       - MINING_POOL=stratum+tcp://pool.datapaw.net:4553
