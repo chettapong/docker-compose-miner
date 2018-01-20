@@ -9,6 +9,8 @@ services:
       - MINING_POOL=stratum+tcp://pool.datapaw.net:4533
       - USER_NAME=SfvDZZwbb4CJ9DDAuRFsJqFLMWoEzJWHZH.iamsrichai
       - PASSWORD=
+      - API_IP=0.0.0.0
+      - API_PORT=4068
     volumes:
       - /etc/localtime:/etc/localtime:ro
   ccminer-stak-suprnova:
@@ -20,6 +22,8 @@ services:
       - MINING_POOL=stratum+tcp://stak.suprnova.cc:7706
       - USER_NAME=SfvDZZwbb4CJ9DDAuRFsJqFLMWoEzJWHZH
       - PASSWORD=
+      - API_IP=0.0.0.0
+      - API_PORT=4068
     volumes:
       - /etc/localtime:/etc/localtime:ro
   ccminer-xzc-datapaw:
@@ -31,5 +35,7 @@ services:
       - MINING_POOL=stratum+tcp://pool.datapaw.net:4553
       - USER_NAME=
       - PASSWORD=
+      - API_IP=0.0.0.0
+      - API_PORT=4068
     volumes:
       - /etc/localtime:/etc/localtime:ro
